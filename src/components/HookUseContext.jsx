@@ -1,4 +1,7 @@
-import React, { useState, useEffect, useReducer } from 'react'
+import React, { useState, useEffect, useReducer,useContext } from 'react'
+
+// 创建上下文
+const Context = React.createContext();
 
 
 // 添加fruit状态维护fruitReducer 
@@ -29,9 +32,10 @@ function FruitList({fruits, onSetFruit}) {
 function FruitAdd(props) {
   // 输入内容状态及设置内容状态的方法
   const [pname, setPname] = useState(""); // 键盘事件处理
+  const {dispatch} = useContext(Context)
   const onAddFruit = e => {
     if (e.key === "Enter") { 
-      props.onAddFruit(pname); 
+      dispatch({ type: "add", payload: pname })
       setPname("");
     }
   }
@@ -51,7 +55,7 @@ function FruitAdd(props) {
 
 
 
-export default function Hook() {
+export default function HookUseContext() {
   // useState(initialState)，接收初始状态，返回一个由状态和其更新函数组成的数组 
   const [fruit, setFruit] = useState("");
   // const [fruits, setFruits] = useState([]);
@@ -71,12 +75,15 @@ export default function Hook() {
   }, [fruit]); // 依赖fruit
 
   return (
-    <div>
-      <p>{fruit === "" ? "请选择喜爱的水果:" : `您的选择是:${fruit}`}</p>
-      <br/>
-      <FruitList fruits={fruits} onSetFruit={setFruit}/>
-      <br/>
-      <FruitAdd onAddFruit={pname => dispatch({type: 'add', payload: pname})} />
-    </div>
+    <Context.Provider value={{fruits,dispatch}}>
+      <div>
+        <p>{fruit === "" ? "请选择喜爱的水果:" : `您的选择是:${fruit}`}</p>
+        <br/>
+        <FruitList fruits={fruits} onSetFruit={setFruit}/>
+        <br/>
+        {/* 这里不再需要给FruitAdd传递状态mutation函数，实现了解耦 */}
+        <FruitAdd/>
+      </div>
+    </Context.Provider>
   )
 }
