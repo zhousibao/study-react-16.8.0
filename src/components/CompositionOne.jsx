@@ -23,7 +23,7 @@ export default function Composition() {
     <>
       {/* 执行显示消息的key */} 
       <Dialog msg="bar">
-      {/* 修改为函数形式，根据传入值生成最终内容  */}
+        {/* 修改为函数形式，根据传入值生成最终内容  */}
         {
           ({title, content}) => ({
             body: (

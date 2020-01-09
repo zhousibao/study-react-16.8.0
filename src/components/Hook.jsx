@@ -1,26 +1,25 @@
 import React, { useState, useEffect, useReducer } from 'react'
 
-
 // 添加fruit状态维护fruitReducer 
 function fruitReducer(state, action) {
   switch (action.type) { 
-    case "init":
-      return action.payload;
-    case "add":
-      return [...state, action.payload]; 
-    default:
-      return state;
-    }
+  case "init":
+    return action.payload;
+  case "add":
+    return [...state, action.payload]; 
+  default:
+    return state;
   }
+}
 
 // 声明列表组件
 function FruitList({fruits, onSetFruit}) {
   return ( 
-  <ul>
-    {fruits.map(f => (
-      <li key={f} onClick={() => onSetFruit(f)}> {f} </li>
-    ))}
-  </ul>
+    <ul>
+      {fruits.map(f => (
+        <li key={f} onClick={() => onSetFruit(f)}> {f} </li>
+      ))}
+    </ul>
   )
 }
 
@@ -47,8 +46,6 @@ function FruitAdd(props) {
     </div>
   )
 }
-
-
 
 
 export default function Hook() {

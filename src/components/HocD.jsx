@@ -33,9 +33,6 @@ const withLog = Comp => {
 @withLog
 @withContent
 class Lesson extends React.Component{
-  constructor(props){
-    super(props)
-  }
   render(){
     return (
       <div>
@@ -44,7 +41,6 @@ class Lesson extends React.Component{
     )
   }
 }
-
 
 
 export default function Hoc() {

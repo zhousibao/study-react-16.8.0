@@ -22,7 +22,7 @@ export default function App() {
       <HookUseContext/>
       {/* <ContextStady/> */}
       {/* <Hoc/> */}
-       {/* <HocD/> */}
+      {/* <HocD/> */}
       {/* <Composition/> */}
       {/* <CompositionOne/> */}
     </div>

@@ -34,7 +34,7 @@ class Clock extends Component {
 
     this.timerId = setInterval(() => {
       this.setState({
-        date: new Date(),
+        date: new Date()
         //count:2
       })
       // console.log('setInterval',this.state.count) // 2 // 同步执行
@@ -85,9 +85,6 @@ function ClockFunction() {
     </div>
   )
 }
-
-
-
 
 
 export default function State() {
