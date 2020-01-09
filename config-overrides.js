@@ -14,8 +14,8 @@ module.exports = override(
   // antd 按需加载
   fixBabelImports('import', {
     libraryName: 'antd',
-    libraryDirectory: 'es',
-    style: 'css'
+    libraryDirectory: 'es', // 在antd的es目录项查找
+    style: 'css' // 依赖加载css文件
   }),
   // WebpackAlias
   addWebpackAlias({
