@@ -16,6 +16,9 @@ import React from 'react'
 // import DialogOne from './components/Antd/DialogOne'
 // import Tree from './components/Antd/Tree'
 // import ShouldComponentUpdate from './components/ShouldComponentUpdate'
+// import ReduxTest from './components/Redux/ReduxTest'
+// import ReactRedux from './components/ReactRedux/ReactRedux'
+import MyRedux from './components/MyRedux/MyRedux'
 
 
 export default function App() {
@@ -37,6 +40,9 @@ export default function App() {
       {/* <DialogOne>16版本以前的实现方式</DialogOne> */}
       {/* <Tree/> */}
       {/* <ShouldComponentUpdate/> */}
+      {/* <ReduxTest/> */}
+      {/* <ReactRedux/> */}
+      <MyRedux/>
     </div>
   )
 }
