@@ -5,7 +5,7 @@ import { connect } from 'react-redux'
 // 参数1: mapStateToProps = state => { return {num:state}}
 // 参数2: mapDispatchToProps = dispatch => { return { add: () => dispatch({type:'add'})}}
 @connect(
-  state => ({num:state}),
+  state => ({num:state.counter}),
   // 简洁写法
   {
     // 同步返回对象

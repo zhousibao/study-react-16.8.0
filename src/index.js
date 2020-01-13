@@ -7,7 +7,7 @@ import'./index.css'  // 全局加载
 // ReactDom: 页面渲染， vdom -> dom
 
 import {Provider} from 'react-redux'
-import store from '@/components/ReactRedux/store.js'
+import store from './store.js'
 
 import App from './App'
 

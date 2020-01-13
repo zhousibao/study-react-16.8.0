@@ -1,8 +1,4 @@
-import { createStore, applyMiddleware } from 'redux'
-import logger from 'redux-logger'
-import thunk from 'redux-thunk'
-
-const counterReducer = function(state = 0, action){
+const counter = function(state = 0, action){
   const num = action.payload || 1
   switch (action.type) {
   case 'add':
@@ -14,8 +10,7 @@ const counterReducer = function(state = 0, action){
   }
 }
 
-const store = createStore(counterReducer,applyMiddleware(logger,thunk))
-export default store
+export default counter
 
 // createStore 创建store
 // reducer 初始化store, 修改状态的函数

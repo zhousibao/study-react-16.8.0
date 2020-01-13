@@ -21,7 +21,8 @@ import React from 'react'
 // import ReactRedux from './components/ReactRedux/ReactRedux'
 // import MyRedux from './components/MyRedux/MyRedux'
 // import Router from './components/Router/Router'
-import MyRouter from './components/MyRouter/MyRouter'
+// import MyRouter from './components/MyRouter/MyRouter'
+import SagaTest from './components/Saga/SagaTest'
 
 
 export default function App() {
@@ -47,7 +48,9 @@ export default function App() {
       {/* <ReactRedux/> */}
       {/* <MyRedux/> */}
       {/* <Router/> */}
-      <MyRouter/>
+      {/* <MyRouter/> */}
+      <SagaTest/>
+
     </div>
   )
 }
