@@ -9,7 +9,7 @@ export function logger({dispatch, getState}){
   }
 }
 
-// thunk中间件
+// thunk中间件 // 增加了处理函数action的能力
 export const thunk = ({dispatch, getState}) => dispatch => action => {
   // 异步的action 返回函数
   if (typeof action === 'function') {

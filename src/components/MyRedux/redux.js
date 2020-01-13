@@ -46,7 +46,7 @@ export function applyMiddleware(...middlewares){
       getState: store.getState,
       dispatch: (...args) => dispatch(...args)
     }
-    // 将来中间件函数： function({}){}  // 参数为一个对象 midApi
+    // 给中间件提供api ,使中间件拥有获取state和派发action的能力 // 参数为一个对象 midApi
     const middlewareChain = middlewares.map(middleware => middleware(midApi)) 
 
     // 强化dispatch 让它可以按顺序执行中间件函数

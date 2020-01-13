@@ -1,5 +1,6 @@
 // 快捷键rfc 函数组件
 import React from 'react'
+
 // import Home from './components/Home'
 // import State from './components/State'
 // import Event from './components/Event'
@@ -18,7 +19,9 @@ import React from 'react'
 // import ShouldComponentUpdate from './components/ShouldComponentUpdate'
 // import ReduxTest from './components/Redux/ReduxTest'
 // import ReactRedux from './components/ReactRedux/ReactRedux'
-import MyRedux from './components/MyRedux/MyRedux'
+// import MyRedux from './components/MyRedux/MyRedux'
+// import Router from './components/Router/Router'
+import MyRouter from './components/MyRouter/MyRouter'
 
 
 export default function App() {
@@ -42,7 +45,9 @@ export default function App() {
       {/* <ShouldComponentUpdate/> */}
       {/* <ReduxTest/> */}
       {/* <ReactRedux/> */}
-      <MyRedux/>
+      {/* <MyRedux/> */}
+      {/* <Router/> */}
+      <MyRouter/>
     </div>
   )
 }
