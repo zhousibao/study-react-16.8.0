@@ -6,7 +6,7 @@ import React from 'react'
 // import Event from './components/Event'
 // import Hook from './components/Hook'
 // import HookUseContext from './components/HookUseContext'
-// import ContextStady from './components/Context/ContextStady'
+import ContextStudy from './components/Context/ContextStudy'
 // import Hoc from './components/Hoc'
 // import HocD from './components/HocD.jsx'
 // import Composition from './components/Composition'
@@ -22,7 +22,7 @@ import React from 'react'
 // import MyRedux from './components/MyRedux/MyRedux'
 // import Router from './components/Router/Router'
 // import MyRouter from './components/MyRouter/MyRouter'
-import SagaTest from './components/Saga/SagaTest'
+// import SagaTest from './components/Saga/SagaTest'
 
 
 export default function App() {
@@ -33,7 +33,7 @@ export default function App() {
       {/* <Event/> */}
       {/* <Hook/> */}
       {/* <HookUseContext/> */}
-      {/* <ContextStady/> */}
+      <ContextStudy/>
       {/* <Hoc/> */}
       {/* <HocD/> */}
       {/* <Composition/> */}
@@ -49,7 +49,7 @@ export default function App() {
       {/* <MyRedux/> */}
       {/* <Router/> */}
       {/* <MyRouter/> */}
-      <SagaTest/>
+      {/* <SagaTest/> */}
 
     </div>
   )
